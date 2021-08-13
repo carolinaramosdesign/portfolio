@@ -7,6 +7,20 @@ const GlobalStyle = createGlobalStyle`
     * {
         margin: 0;
         padding: 0;
+        min-width: 0;
+        min-height: 0; 
+    }
+
+    html,
+    body {  
+        height: 100%;
+        width:100%;
+        font-size: 1.2vw;
+    }
+
+    #root {
+        width: 100%;
+        height: 100%;
     }
 `;
 

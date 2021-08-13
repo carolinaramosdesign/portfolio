@@ -7,7 +7,7 @@ const Footer = () => (
     <StyledFooter>
         <div>Work selection 2014-2015.</div>
         <CenteredContent>
-            <LinkContainer to="/about">
+            <LinkContainer to='/about'>
                 <WeightedText>Contacts</WeightedText>
             </LinkContainer>
         </CenteredContent>

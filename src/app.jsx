@@ -1,17 +1,15 @@
-import { Container, Header, Footer, Hello, About } from 'content';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Container, Header, Footer, Hello, About, Project } from 'content';
+import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 
 const App = () => (
     <Container>
-        <BrowserRouter basename="/portfolio">
+        <BrowserRouter basename='/portfolio'>
             <Header />
             <Switch>
-                <Route exact path={['', '/']}>
-                    <Hello />
-                </Route>
-                <Route exact path="/about">
-                    <About />
-                </Route>
+                <Route exact path={['', '/']} component={Hello} />
+                <Route exact path='/about' component={About} />
+                <Route exact path='/project/:project' component={Project} />
+                <Redirect to='/' />
             </Switch>
             <Footer />
         </BrowserRouter>

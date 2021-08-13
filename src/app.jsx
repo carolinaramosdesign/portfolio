@@ -1,10 +1,20 @@
-import { Container, Header, Footer, Main } from 'content';
+import { Container, Header, Footer, Hello, About } from 'content';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const App = () => (
     <Container>
-        <Header />
-        <Main />
-        <Footer />
+        <BrowserRouter basename="/portfolio">
+            <Header />
+            <Switch>
+                <Route exact path={['', '/']}>
+                    <Hello />
+                </Route>
+                <Route exact path="/about">
+                    <About />
+                </Route>
+            </Switch>
+            <Footer />
+        </BrowserRouter>
     </Container>
 );
 

@@ -1,7 +1,7 @@
+import { createGlobalStyle } from 'styled-components';
 import { render } from 'react-dom';
 import { StrictMode } from 'react';
 import App from 'app';
-import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     * {

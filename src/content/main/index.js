@@ -1,3 +1,4 @@
-import Main from 'content/main/main';
+import Hello from 'content/main/hello';
+import About from 'content/main/about';
 
-export default Main;
+export { Hello, About };

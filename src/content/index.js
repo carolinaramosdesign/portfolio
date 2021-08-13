@@ -1,6 +1,6 @@
 import Container from 'content/container';
 import Header from 'content/header';
 import Footer from 'content/footer';
-import Main from 'content/main';
+import { Hello, About } from 'content/main';
 
-export { Container, Header, Footer, Main };
+export { Container, Header, Footer, Hello, About };

@@ -1,13 +1,14 @@
+import StyledMain from 'content/main/styled-main';
 import StyledContainer from 'component/styled-container';
 import StyledImage from 'component/styled-image';
-import StyledMain from './styled-main';
+import hello from 'content/main/hello/hello.jpeg';
 
-const Main = () => (
+const Hello = () => (
     <StyledMain>
         <StyledContainer alignment="center">
-            <StyledImage src="/img/hello.jpg" alt="Hello" />
+            <StyledImage src={hello} alt="Hello" />
         </StyledContainer>
     </StyledMain>
 );
 
-export default Main;
+export default Hello;

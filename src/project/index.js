@@ -1,7 +1,11 @@
 import projectConfig from 'project/config.json';
 
+export function getProjects() {
+    return Object.keys(projectConfig);
+}
+
 export function isProject(project) {
-    return Object.keys(projectConfig).includes(project);
+    return getProjects().includes(project);
 }
 
 export function getConfig(project) {

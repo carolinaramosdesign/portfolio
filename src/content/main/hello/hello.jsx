@@ -5,7 +5,7 @@ import hello from 'content/main/hello/hello.jpeg';
 
 const Hello = () => (
     <StyledMain>
-        <StyledContainer alignment='center'>
+        <StyledContainer fill alignment='center'>
             <StyledImage src={hello} alt='Hello' />
         </StyledContainer>
     </StyledMain>

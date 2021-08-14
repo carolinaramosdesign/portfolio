@@ -11,12 +11,12 @@ const Header = () => (
         <div>
             <WeightedText>Carolina Ramos</WeightedText> | Graphic Designer
         </div>
-        <StyledContainer alignment='center'>
+        <StyledContainer fill alignment='center'>
             <LinkContainer to='/'>
                 <StyledImage src={logo} alt='Logo' />
             </LinkContainer>
         </StyledContainer>
-        <StyledContainer alignment='right' gap='5' unit='%'>
+        <StyledContainer fill alignment='right' gap='5' unit='%'>
             <LinkContainer to='/about'>
                 <WeightedText>About</WeightedText>
             </LinkContainer>

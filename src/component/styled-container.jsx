@@ -1,11 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import CenteredContent from 'component/centered-content';
-import { oneOf, string } from 'prop-types';
+import { oneOf, string, bool } from 'prop-types';
 
 const alignmentMap = {
     left: 'flex-start',
     center: 'center',
-    right: 'flex-end'
+    right: 'flex-end',
+    stretch: 'space-between'
 };
 
 const directionMap = {
@@ -13,8 +14,15 @@ const directionMap = {
     horizontal: 'row'
 };
 
-const StyledContainer = styled(CenteredContent)`
-    height: 100%;
+// https://github.com/styled-components/styled-components/pull/3006
+const StyledContainer = styled(CenteredContent).withConfig({
+    shouldForwardProp: prop => !['fill', 'alignment', 'gap', 'unit', 'direction'].includes(prop)
+})`
+    ${({ fill = false }) =>
+        fill &&
+        css`
+            height: 100%;
+        `}
     width: 100%;
     ${({ alignment = 'left' }) => `justify-content: ${alignmentMap[alignment]};`}
     ${({ gap = '0', unit = '%' }) => `gap: ${gap}${unit};`}
@@ -25,7 +33,8 @@ StyledContainer.propTypes = {
     alignment: oneOf(Object.keys(alignmentMap)),
     gap: string,
     unit: string,
-    direction: oneOf(Object.keys(directionMap))
+    direction: oneOf(Object.keys(directionMap)),
+    fill: bool
 };
 
 export default StyledContainer;

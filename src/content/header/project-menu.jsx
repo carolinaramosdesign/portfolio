@@ -12,20 +12,21 @@ const Container = styled.div`
     }
 `;
 
-const ProjectList = styled(Container)`
+const ProjectList = styled.div`
+    display: flex;
+    flex-direction: column;
     ${({ open = false }) => `visibility: ${open ? 'visible' : 'hidden'};`}
     position: absolute;
     right: 0;
-    ${({ width, unit = 'px' }) => `width: calc(${width}${unit} - 5% - 5%);`}
     margin: 0 5%;
     ${({ top, unit = 'px' }) => `top: calc(${top}${unit} + 0.5rem);`}
+    gap: 0.5rem;
 `;
 
 ProjectList.propTypes = {
     open: bool,
-    width: number.isRequired,
-    unit: string,
-    top: number
+    top: number,
+    unit: string
 };
 
 const ProjectMenu = () => {
@@ -38,10 +39,12 @@ const ProjectMenu = () => {
             <Container ref={containerRef} onClick={() => setOpen(!open)}>
                 <WeightedText>Projects</WeightedText>
             </Container>
-            <ProjectList open={open} width={window.innerWidth} top={bottom}>
+            <ProjectList open={open} top={bottom}>
                 {Object.entries(projectConfig).map(([key, { name }]) => (
                     <LinkContainer key={key} to={`/project/${key}`} onClick={() => setOpen(false)}>
-                        <StyledContainer alignment='right'>{name}</StyledContainer>
+                        <StyledContainer fill alignment='right'>
+                            {name}
+                        </StyledContainer>
                     </LinkContainer>
                 ))}
             </ProjectList>

@@ -10,7 +10,7 @@ const CenteredText = styled.div`
 
 const About = () => (
     <StyledMain>
-        <StyledContainer alignment='center' direction='vertical' gap='2' unit='rem'>
+        <StyledContainer fill alignment='center' direction='vertical' gap='2' unit='rem'>
             <CenteredText>Carolina Ramos</CenteredText>
             <CenteredText>Graphic Designer - Porto, Portugal</CenteredText>
             <CenteredText>

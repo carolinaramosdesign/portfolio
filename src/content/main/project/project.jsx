@@ -8,6 +8,8 @@ import StyledContainer from 'component/styled-container';
 import StyledImage from 'component/styled-image';
 
 const CarouselContainer = styled.div`
+    height: 85%;
+
     .control-arrow {
         padding: 10% !important;
 
@@ -21,11 +23,12 @@ const CarouselContainer = styled.div`
     }
 
     /* https://github.com/leandrowd/react-responsive-carousel/issues/265 */
-    .carousel-wrapper,
+    .carousel-root,
     .carousel,
-    .carousel > .slider-wrapper,
-    .carousel > .slider-wrapper > .slider {
-        height: 100%;
+    .carousel .slider-wrapper,
+    ul,
+    li {
+        height: 100% !important;
     }
 `;
 
@@ -36,29 +39,30 @@ const Project = () => {
         return <Redirect to='/' />;
     }
 
-    const { description, year } = getConfig(project);
+    const { description } = getConfig(project);
 
     return (
         <StyledMain>
-            <StyledContainer direction='vertical' alignment='center' gap='2' unit='rem'>
+            <StyledContainer fill direction='vertical' alignment='stretch' gap='1' unit='rem'>
                 <CarouselContainer>
                     <Carousel
                         showThumbs={false}
                         showIndicators={false}
                         showStatus={false}
                         infiniteLoop
-                        className='carousel-wrapper'
                     >
                         {getImages(project).map((src, index) => (
                             <StyledImage key={index} src={src} alt={`${project} ${index}`} />
                         ))}
                     </Carousel>
                 </CarouselContainer>
-                <div>
-                    {description}
-                    <br />
-                    {year}
-                </div>
+                <StyledContainer direction='vertical' alignment='right' gap='0.75' unit='rem'>
+                    {description.map(line => (
+                        <StyledContainer key={line} direction='horizontal'>
+                            {line}
+                        </StyledContainer>
+                    ))}
+                </StyledContainer>
             </StyledContainer>
         </StyledMain>
     );

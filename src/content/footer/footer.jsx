@@ -5,7 +5,7 @@ import WeightedText from 'component/weighted-text';
 
 const Footer = () => (
     <StyledFooter>
-        <div>Work selection 2014-2015.</div>
+        <p>Work selection 2014-2015.</p>
         <CenteredContent>
             <LinkContainer to='/about'>
                 <WeightedText>Contacts</WeightedText>

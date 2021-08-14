@@ -9,7 +9,63 @@
             "black-blind-poor-5.jpg",
             "black-blind-poor-6.jpg"
         ],
-        "description": "Editorial Project - Bibliographical book representing Stevie Wonder's life and work, directly connected with Soul music.",
-        "year": 2014
+        "description": [
+            "Editorial Project - Bibliographical book representing Stevie Wonder's life and work, directly connected with Soul music.",
+            "2014"
+        ]
+    },
+    "jup": {
+        "name": "JUP",
+        "images": ["JUP-1.jpg", "JUP-2.jpg", "JUP-3.jpg", "JUP-4.jpg", "JUP-5.jpg"],
+        "description": [
+            "Editorial and Illustrative Project - Reformulation of Jornal Universitário do Porto (JUP), presenting it with a new editorial project and using illustration as the main text support.",
+            "2014"
+        ]
+    },
+    "marble": {
+        "name": "Marble",
+        "images": ["marble-1.jpg", "marble-2.jpg", "marble-3.jpg", "marble-4.jpg", "marble-5.jpg"],
+        "description": [
+            "Web Design - Newsletter representing Aãrk Collective's collection, marketed by Dialetu.",
+            "(Photos supplied by the brand and subsequently edited.)",
+            "2015"
+        ]
+    },
+    "be-different": {
+        "name": "Be Different",
+        "images": [
+            "be-different-1.jpg",
+            "be-different-2.jpg",
+            "be-different-3.jpg",
+            "be-different-4.jpg",
+            "be-different-5.jpg"
+        ],
+        "description": [
+            "Web Design - Newsletter representing products marketed by Dialetu.",
+            "(Photos supplied by the brand and subsequently edited.)",
+            "2015"
+        ]
+    },
+    "gomariz": {
+        "name": "Gomariz",
+        "images": ["gomariz-1.jpg", "gomariz-2.jpg", "gomariz-3.jpg"],
+        "description": [
+            "Packaging Design - Label created for the labels contest for Vinho Verde Branco Premium da Quinta de Gomariz.",
+            "2015"
+        ]
+    },
+    "femina": {
+        "name": "Femina",
+        "images": ["femina-1.jpg", "femina-2.jpg", "femina-3.jpg"],
+        "description": [
+            "Photo shoot - Woman, her relationship with others, her integration in society and the conflicts with herself.",
+            "(Inspired by Carolee Schneemann, Francesca Woodman and Hannah Wilke.",
+            "2014"
+        ]
+    },
+    "design-improntu": {
+        "name": "Design Improntu",
+        "images": ["design-improntu.jpg"],
+        "description": ["Photography - Everyday design in an unique and irreverent way.", "2014"]
     }
 }

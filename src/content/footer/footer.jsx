@@ -1,7 +1,5 @@
 import StyledFooter from 'content/footer/styled-footer';
-import LinkContainer from 'component/link-container';
-import CenteredContent from 'component/centered-content';
-import WeightedText from 'component/weighted-text';
+import { LinkContainer, CenteredContent, WeightedText } from 'component';
 
 const Footer = () => (
     <StyledFooter>

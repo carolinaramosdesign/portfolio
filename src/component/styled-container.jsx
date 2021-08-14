@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import CenteredContent from 'component/centered-content';
+import { CenteredContent } from 'component';
 import { oneOf, string, bool } from 'prop-types';
 
 const alignmentMap = {

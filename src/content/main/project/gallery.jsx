@@ -5,7 +5,7 @@ import 'swiper/swiper.min.css';
 import SwiperCore, { Navigation } from 'swiper/core';
 import 'swiper/components/navigation/navigation.min.css';
 import { getImages, getProjects } from 'project';
-import StyledImage from 'component/styled-image';
+import { StyledImage } from 'component';
 import { number, oneOf } from 'prop-types';
 
 SwiperCore.use(Navigation);

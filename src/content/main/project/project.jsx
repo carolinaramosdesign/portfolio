@@ -1,7 +1,7 @@
 import { Redirect, useParams } from 'react-router-dom';
 import StyledMain from 'content/main/styled-main';
 import { isProject, getConfig } from 'project';
-import StyledContainer from 'component/styled-container';
+import { StyledContainer } from 'component';
 import Gallery from 'content/main/project/gallery';
 
 const Project = () => {

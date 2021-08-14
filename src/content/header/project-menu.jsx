@@ -1,10 +1,8 @@
 import { useRef, useState } from 'react';
-import WeightedText from 'component/weighted-text';
+import { WeightedText, StyledContainer, LinkContainer } from 'component';
 import projectConfig from 'project/config.json';
 import styled from 'styled-components';
 import { bool, number, string } from 'prop-types';
-import StyledContainer from 'component/styled-container';
-import LinkContainer from 'component/link-container';
 
 const Container = styled.div`
     &:hover {

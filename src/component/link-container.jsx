@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import CenteredContent from 'component/centered-content';
+import { CenteredContent } from 'component';
 import { useHistory } from 'react-router-dom';
 import { string, node, func } from 'prop-types';
 

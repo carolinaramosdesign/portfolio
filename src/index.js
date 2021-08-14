@@ -18,7 +18,8 @@ const GlobalStyle = createGlobalStyle`
         font-size: 1.2vw;
     }
 
-    #root {
+    #root,
+    .react-orientation {
         width: 100%;
         height: 100%;
     }

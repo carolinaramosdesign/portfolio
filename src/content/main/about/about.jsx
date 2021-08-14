@@ -1,6 +1,5 @@
 import StyledMain from 'content/main/styled-main';
-import StyledContainer from 'component/styled-container';
-import StyledImage from 'component/styled-image';
+import { StyledContainer, StyledImage } from 'component';
 import x from 'content/main/about/x.png';
 import styled from 'styled-components';
 

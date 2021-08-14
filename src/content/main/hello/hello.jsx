@@ -1,6 +1,6 @@
 import StyledMain from 'content/main/styled-main';
-import StyledContainer from 'component/styled-container';
-import StyledImage from 'component/styled-image';
+
+import { StyledContainer, StyledImage } from 'component';
 import hello from 'content/main/hello/hello.jpeg';
 
 const Hello = () => (

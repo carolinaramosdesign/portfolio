@@ -17,11 +17,9 @@ const Project = () => {
         <StyledMain>
             <StyledContainer fill direction='vertical' alignment='stretch' gap='1' unit='rem'>
                 <Gallery project={project} />
-                <StyledContainer direction='vertical'>
+                <StyledContainer direction='vertical' gap='1' unit='rem'>
                     {description.map(line => (
-                        <StyledContainer key={line} direction='horizontal'>
-                            {line}
-                        </StyledContainer>
+                        <StyledContainer key={line}>{line}</StyledContainer>
                     ))}
                 </StyledContainer>
             </StyledContainer>

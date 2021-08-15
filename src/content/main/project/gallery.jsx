@@ -5,12 +5,12 @@ import 'swiper/swiper.min.css';
 import SwiperCore, { Navigation } from 'swiper/core';
 import 'swiper/components/navigation/navigation.min.css';
 import { getImages, getProjects } from 'project';
-import { StyledImage } from 'component';
+import { StyledImage, CenteredContent } from 'component';
 import { number, oneOf } from 'prop-types';
 
 SwiperCore.use(Navigation);
 
-const GalleryContainer = styled.div.withConfig({
+const GalleryContainer = styled(CenteredContent).withConfig({
     shouldForwardProp: prop => !['margin'].includes(prop)
 })`
     width: 100%;
@@ -93,7 +93,12 @@ const Gallery = ({ project }) => {
             {images.length === 1 ? (
                 <StyledImage src={images[0]} alt={project} />
             ) : (
-                <Swiper navigation loop onSlideChange={({ activeIndex }) => setIndex(activeIndex)}>
+                <Swiper
+                    navigation
+                    loop
+                    spaceBetween={containerRef.current?.clientWidth}
+                    onSlideChange={({ activeIndex }) => setIndex(activeIndex)}
+                >
                     {images.map((src, index) => (
                         <SwiperSlide key={index}>
                             <StyledImage src={src} alt={`${project} ${index}`} />

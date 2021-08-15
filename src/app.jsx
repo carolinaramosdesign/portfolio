@@ -1,5 +1,5 @@
 import { Container, Header, Footer, Hello, About, Project } from 'content';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import DeviceOrientation, { Orientation } from 'react-screen-orientation';
 import { StyledImage, StyledContainer } from 'component';
 import rotate from 'content/rotate.png';
@@ -8,7 +8,7 @@ const App = () => (
     <DeviceOrientation className='react-orientation'>
         <Orientation orientation='landscape' alwaysRender={false}>
             <Container>
-                <BrowserRouter basename='/portfolio'>
+                <HashRouter>
                     <Header />
                     <Switch>
                         <Route exact path={['', '/']} component={Hello} />
@@ -17,7 +17,7 @@ const App = () => (
                         <Redirect to='/' />
                     </Switch>
                     <Footer />
-                </BrowserRouter>
+                </HashRouter>
             </Container>
         </Orientation>
         <Orientation orientation='portrait' alwaysRender={false}>
